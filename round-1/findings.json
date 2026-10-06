@@ -1,17 +1,17 @@
 {
   "round": "round-1",
-  "team": "BB-XXX",
-  "queries_used": 0,
+  "team": "BB-010",
+  "queries_used": 95,
   "claims": [
     {
       "type": "feature_effect",
-      "feature": "x1",
+      "feature": "months_active",
       "direction": "increases",
-      "strength": "strong",
-      "confidence": 0.0,
+      "strength": "weak",
+      "confidence": 0.6,
       "evidence": {
-        "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
+        "query_ids": [95],
+        "summary": "With the other observed inputs held at the high-scoring configuration, increasing months_active to 1 produced an approval score of 0.9889, with an observed increase of +0.0003 from the previous query."
       }
     }
   ]
