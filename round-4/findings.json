@@ -1,17 +1,116 @@
 {
   "round": "round-4",
-  "team": "BB-XXX",
-  "queries_used": 0,
+  "team": "BB-010",
+  "queries_used": 98,
   "claims": [
     {
       "type": "feature_effect",
-      "feature": "x1",
+      "feature": "post_length",
       "direction": "increases",
       "strength": "strong",
-      "confidence": 0.0,
+      "confidence": 0.99,
       "evidence": {
-        "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
+        "query_ids": ["R2-36", "R2-35", "R2-37", "R2-34"],
+        "summary": "With the other inputs held constant, increasing post_length from 26.5 to 100 increased the observed score from 0.9411 to 0.9897. Intermediate values were 0.9695 at 50 and 0.9865 at 85.5."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "surface",
+      "direction": "changes",
+      "strength": "strong",
+      "confidence": 0.99,
+      "evidence": {
+        "query_ids": ["R2-83", "R2-84", "R2-85", "R2-82"],
+        "summary": "Holding the numeric inputs constant, surface produced the largest observed score variation: A=0.9872, B=0.9876, C=0.0560, and D=0.9900. Surface C therefore produced a 0.9340 lower score than D in this controlled comparison."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "recent_strikes",
+      "direction": "decreases",
+      "strength": "moderate",
+      "confidence": 0.95,
+      "evidence": {
+        "query_ids": ["R2-24", "R2-25", "R2-26"],
+        "summary": "With the other inputs held constant, increasing recent_strikes from 0 to 2 reduced the score from 0.9897 to 0.9822, and 2.5 reduced it further to 0.9792."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "reputation",
+      "direction": "decreases",
+      "strength": "moderate",
+      "confidence": 0.94,
+      "evidence": {
+        "query_ids": ["R2-62", "R2-66", "R2-23", "R2-22"],
+        "summary": "With other inputs held constant, increasing reputation from 300 to 320, 510, and 900 reduced the observed score from 0.9898 to 0.9883, 0.9672, and 0.9277 respectively."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "reach",
+      "direction": "decreases",
+      "strength": "moderate",
+      "confidence": 0.93,
+      "evidence": {
+        "query_ids": ["R2-17", "R2-18", "R2-19", "R2-20"],
+        "summary": "With the other inputs held constant, increasing reach from 1 to 10, 51, and 97.5 reduced the score from 0.9889 to 0.9874, 0.9746, and 0.9205."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "months_active",
+      "direction": "decreases",
+      "strength": "weak",
+      "confidence": 0.89,
+      "evidence": {
+        "query_ids": ["R2-86", "R2-87", "R2-88", "R2-89", "R2-90"],
+        "summary": "With other inputs held constant, increasing months_active from 0 to 1 produced a small score decrease from 0.9900 to 0.9897."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "account_age_days",
+      "direction": "increases",
+      "strength": "weak",
+      "confidence": 0.88,
+      "evidence": {
+        "query_ids": ["R2-52", "R2-54"],
+        "summary": "In the controlled account-age comparison, increasing account_age_days from 65 to 75 increased the observed score from 0.9882 to 0.9898."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "linked_accounts",
+      "direction": "no_clear_effect",
+      "strength": "weak",
+      "confidence": 0.86,
+      "evidence": {
+        "query_ids": ["R2-78", "R2-79", "R2-80"],
+        "summary": "Changing linked_accounts from 0 to 10 to 20 produced the same observed score of 0.9900 in these controlled queries, so no measurable effect was observed in this region."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "mentions",
+      "direction": "no_clear_effect",
+      "strength": "weak",
+      "confidence": 0.86,
+      "evidence": {
+        "query_ids": ["R2-80", "R2-81", "R2-82"],
+        "summary": "Changing mentions from 6 to 0 to 3 produced the same observed score of 0.9900 in these controlled queries, so no measurable effect was observed in this region."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "report_ratio",
+      "direction": "no_clear_effect",
+      "strength": "weak",
+      "confidence": 0.86,
+      "evidence": {
+        "query_ids": ["R2-73", "R2-74", "R2-75"],
+        "summary": "Changing report_ratio among 1, 0, and 0.5 produced an observed score of 0.9900 in all three controlled queries, so no measurable effect was observed in this region."
       }
     }
   ]
