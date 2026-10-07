@@ -1,5 +1,9 @@
 # round-4 — Reconstruct
-
+**To see the output 
+**1.upload gk04_queries.csv[command to upload : from google.colab import files
+files.upload()   # pick gk04_queries.csv]
+2.then add BB_010.ipynb file in code block then tap run**
+**
 Build a model that reproduces the hidden system's behaviour.
 
 Your queries are your training set — including everything you already spent in Rounds 1
