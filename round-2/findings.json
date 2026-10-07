@@ -1,17 +1,116 @@
 {
   "round": "round-2",
-  "team": "BB-XXX",
-  "queries_used": 0,
+  "team": "BB-010",
+  "queries_used": 98,
   "claims": [
     {
       "type": "feature_effect",
-      "feature": "x1",
+      "feature": "months_active",
+      "direction": "decreases",
+      "strength": "moderate",
+      "confidence": 0.94,
+      "evidence": {
+        "query_ids": ["R2-86", "R2-87", "R2-88", "R2-89", "R2-90", "R2-91"],
+        "summary": "With the remaining high-scoring inputs held fixed, increasing months_active from 0 to 1 reduced the score from 0.9900 to 0.9897. Larger increases produced progressively larger reductions, including 0.9796 at 20 months and 0.9468 at 40 months. The observed local sensitivity near the optimum is approximately -0.0003 score per month."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "reach",
+      "direction": "decreases",
+      "strength": "weak",
+      "confidence": 0.91,
+      "evidence": {
+        "query_ids": ["R2-92", "R2-93", "R2-94", "R2-95", "R2-96", "R2-97", "R2-98"],
+        "summary": "Near the high-score region, reducing reach to 0 produced the highest observed score of 0.9900. Increasing reach from 0 to 1 reduced the score to 0.9898, while intermediate values of 0.25, 0.50 and 0.75 produced 0.9900, 0.9899 and 0.9899 respectively. The local effect is small, approximately -0.0002 score per unit from reach 0 to 1."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "post_length",
       "direction": "increases",
       "strength": "strong",
-      "confidence": 0.0,
+      "confidence": 0.97,
       "evidence": {
-        "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
+        "query_ids": ["R2-35", "R2-36", "R2-37"],
+        "summary": "Increasing post_length improved the score consistently in the tested range. Scores increased from 0.9411 at 26.5 to 0.9695 at 50, 0.9865 at 85.5 and approximately 0.9897 at 100. Between 50 and 100, the observed average increase was approximately +0.000404 score per unit."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "recent_strikes",
+      "direction": "decreases",
+      "strength": "strong",
+      "confidence": 0.97,
+      "evidence": {
+        "query_ids": ["R2-24", "R2-25", "R2-26"],
+        "summary": "Increasing recent_strikes consistently reduced the score. The score decreased from 0.9897 at 0 strikes to 0.9822 at 2 strikes and 0.9792 at 2.5 strikes. The observed local sensitivity is approximately -0.00375 to -0.0042 score per strike."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "reputation",
+      "direction": "decreases",
+      "strength": "strong",
+      "confidence": 0.96,
+      "evidence": {
+        "query_ids": ["R2-21", "R2-23", "R2-62", "R2-63", "R2-64", "R2-66", "R2-68"],
+        "summary": "Increasing reputation reduced the score in the tested high-score region. The score decreased from approximately 0.9898 at reputation 300 to 0.9883 at 320, 0.9672 at 510 and 0.9277 at 900. The observed average sensitivity over 300 to 900 is approximately -0.000103 score per reputation unit."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "account_age_days",
+      "direction": "increases",
+      "strength": "moderate",
+      "confidence": 0.90,
+      "evidence": {
+        "query_ids": ["R2-52", "R2-53"],
+        "summary": "Increasing account_age_days from 65 to 75 increased the observed score from 0.9882 to 0.9898 under the tested configuration. The local observed sensitivity is approximately +0.00016 score per additional day."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "linked_accounts",
+      "direction": "no measurable effect",
+      "strength": "weak",
+      "confidence": 0.88,
+      "evidence": {
+        "query_ids": ["R2-45", "R2-46", "R2-47", "R2-48", "R2-49", "R2-50", "R2-51"],
+        "summary": "Changing linked_accounts across 0, 2, 6, 12, 15, 18 and 20 produced the same displayed score of approximately 0.9898 in the tested high-score configuration."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "mentions",
+      "direction": "no measurable effect",
+      "strength": "weak",
+      "confidence": 0.88,
+      "evidence": {
+        "query_ids": ["R2-80", "R2-81", "R2-82"],
+        "summary": "Changing mentions between 0, 3 and 6 produced a displayed score of 0.9900 under the controlled high-score configuration. No measurable effect was observed at four-decimal display precision."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "report_ratio",
+      "direction": "no measurable effect",
+      "strength": "weak",
+      "confidence": 0.88,
+      "evidence": {
+        "query_ids": ["R2-73", "R2-74", "R2-75"],
+        "summary": "Changing report_ratio between 0, 0.5 and 1 produced a displayed score of 0.9900 under the controlled high-score configuration. No measurable effect was observed at four-decimal display precision."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "surface",
+      "direction": "categorical_effect",
+      "strength": "very strong",
+      "confidence": 0.99,
+      "evidence": {
+        "query_ids": ["R2-82", "R2-83", "R2-84", "R2-85"],
+        "summary": "With the numerical inputs held constant, surface D produced 0.9900, A produced 0.9872, B produced 0.9876 and C produced only 0.0560. Surface therefore showed the largest observed categorical effect, with D being the strongest tested surface."
       }
     }
   ]
