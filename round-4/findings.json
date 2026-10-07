@@ -1,17 +1,61 @@
 {
   "round": "round-4",
-  "team": "BB-XXX",
-  "queries_used": 0,
+  "team": "BB-010",
+  "queries_used": 98,
   "claims": [
     {
       "type": "feature_effect",
-      "feature": "x1",
+      "feature": "post_length",
       "direction": "increases",
       "strength": "strong",
-      "confidence": 0.0,
+      "confidence": 0.99,
       "evidence": {
-        "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
+        "query_ids": ["R2-36", "R2-35", "R2-37", "R2-34"],
+        "summary": "Increasing post_length from 26.5 to 100 increased the score from 0.9411 to 0.9897."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "surface",
+      "direction": "changes",
+      "strength": "strong",
+      "confidence": 0.99,
+      "evidence": {
+        "query_ids": ["R2-83", "R2-84", "R2-85", "R2-82"],
+        "summary": "With other inputs held constant, surface produced the largest score variation: A=0.9872, B=0.9876, C=0.0560, D=0.9900."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "recent_strikes",
+      "direction": "decreases",
+      "strength": "moderate",
+      "confidence": 0.95,
+      "evidence": {
+        "query_ids": ["R2-24", "R2-25", "R2-26"],
+        "summary": "Increasing recent_strikes from 0 to 2.5 reduced the score from 0.9897 to 0.9792."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "reputation",
+      "direction": "decreases",
+      "strength": "moderate",
+      "confidence": 0.94,
+      "evidence": {
+        "query_ids": ["R2-62", "R2-66", "R2-23", "R2-22"],
+        "summary": "Increasing reputation from 300 to 900 reduced the score from 0.9898 to 0.9277."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "reach",
+      "direction": "decreases",
+      "strength": "moderate",
+      "confidence": 0.93,
+      "evidence": {
+        "query_ids": ["R2-17", "R2-18", "R2-19", "R2-20"],
+        "summary": "Increasing reach from 1 to 97.5 reduced the score from 0.9889 to 0.9205."
       }
     }
   ]
